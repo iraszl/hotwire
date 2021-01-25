@@ -1,0 +1,11 @@
+= turbo_stream_from "tweets"
+%h1.text-primary Tweeter Hotwire Demo
+%hr
+%p What's on your mind?
+= turbo_frame_tag "tweet_form" do
+  = render 'form', tweet: @tweet
+.clearfix
+%hr
+= turbo_frame_tag "tweets" do
+  -# = render partial: "tweet", locals: {tweets: @tweets}
+  = render @tweets

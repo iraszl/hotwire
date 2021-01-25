@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Hotwire
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+
+    .container.mt-5
+      .row
+        .col-lg-3.col-md-2
+        .col-lg-6.pl-lg-0.col-md-8.pl-md-0
+          - if notice
+            .alert.alert-info= notice
+          - if alert
+            .alert.alert-warning= alert
+          = yield
+        .col-lg-3.col-md-2

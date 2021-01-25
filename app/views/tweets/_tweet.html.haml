@@ -1,0 +1,16 @@
+= turbo_frame_tag dom_id(tweet) do
+  .card.mb-3
+    .card-body
+      %p.text-muted.small Posted #{time_ago_in_words(tweet.created_at)} ago • Updated #{time_ago_in_words(tweet.updated_at)} ago
+      %p.mb-1= tweet.body
+    .card-footer
+      .float-right
+        = link_to 'Edit', edit_tweet_path(tweet), class: "ml-2 btn btn-primary btn-sm"
+        = link_to 'Delete', tweet, method: :delete, data: { confirm: 'Are you sure?' }, class: "ml-2 btn btn-danger btn-sm"
+      = button_to "Like", tweet_like_path(tweet), method: :post, class: "btn btn-primary btn-sm mr-2 float-left"
+      .likes.mt-1
+        - unless tweet.likes == nil
+          .text-muted #{tweet.likes} Likes
+        - else
+          .text-muted No Likes Yet
+      .clearfix
