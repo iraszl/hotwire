@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
 
   def index
     @tweet = Tweet.new
-    @tweets = Tweet.order(id: :desc)
+    @tweets = Tweet.order(created_at: :desc)
   end
 
   def show
