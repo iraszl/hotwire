@@ -3,6 +3,7 @@ class LikesController < ApplicationController
 
   def create
     @tweet.increment! :likes
+    @tweet.update(updated_at: Time.current)
     redirect_to @tweet
   end
 

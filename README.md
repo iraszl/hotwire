@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Environment:
 
-Things you may want to cover:
+* Ruby 2.7.1
 
-* Ruby version
+* Rails 6.1 + Hotwire
 
-* System dependencies
+* Redis Server
 
-* Configuration
+Useful links:
 
-* Database creation
+* Tutorial: https://www.youtube.com/watch?v=Qp6sxgjA-xY
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Hotwire: https://hotwire.dev

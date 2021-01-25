@@ -1,5 +1,15 @@
 = turbo_stream_from "tweets"
-%h1.text-primary Tweeter Hotwire Demo
+%h1.text-dark 🍭 Tweeter
+%p.mb-0
+  %span= link_to "Hotwire", "https://hotwire.dev"
+  %span Unofficial Technology Demo
+%p.small.mb-0
+  %span Based on the
+  %span= link_to "tutorial", "https://www.youtube.com/watch?v=Qp6sxgjA-xY"
+  %span by Chris Oliver / GoRails. Find
+  %span= link_to "source code", "https://github.com/iraszl/hotwire"
+  %span on Github.
+%p.small Hint: Open two browser windows. Change in one reflects in the other without page reload.
 %hr
 %p What's on your mind?
 = turbo_frame_tag "tweet_form" do
